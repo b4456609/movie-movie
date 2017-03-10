@@ -29,6 +29,7 @@ public class MovieRepositoryTests {
 
     @Before
     public void before() {
+        this.movieRepository.deleteAll();
         lalalandMovie = Movie.builder()
                 .id("1234")
                 .title("La La Land")
