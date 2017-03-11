@@ -1,17 +1,10 @@
-package ntou.soselab.movie.model;
-
+package ntou.soselab.movie.controller;
 
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Builder
-@Document
-public class Movie {
-    @Id
-    private String id;
+public class MovieDTO {
     private String title;
     private int year;
     private String rated;
