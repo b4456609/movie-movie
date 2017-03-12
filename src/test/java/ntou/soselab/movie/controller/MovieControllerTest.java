@@ -76,7 +76,7 @@ public class MovieControllerTest {
 
         assertThat(value)
                 .hasFieldOrPropertyWithValue("title", "La La Land")
-                .hasFieldOrPropertyWithValue("year", 2016)
+                .hasFieldOrPropertyWithValue("year", "2016")
                 .hasFieldOrPropertyWithValue("rated", "PG-13")
                 .hasFieldOrPropertyWithValue("runTime", "128 min")
                 .hasFieldOrPropertyWithValue("genre", "Comedy, Drama, Musical")

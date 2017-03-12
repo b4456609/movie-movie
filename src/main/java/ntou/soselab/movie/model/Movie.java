@@ -13,7 +13,7 @@ public class Movie {
     @Id
     private String id;
     private String title;
-    private int year;
+    private String year;
     private String rated;
     private String runTime;
     private String genre;
