@@ -3,6 +3,7 @@ package ntou.soselab.movie.model;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Tolerate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -20,4 +21,8 @@ public class Movie {
     private String director;
     private String actors;
     private String plot;
+
+    @Tolerate
+    Movie() {
+    }
 }
