@@ -13,7 +13,6 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
-apply plugin: 'au.com.dius.pact'
 
 jar {
 	baseName = 'movie'
@@ -46,10 +45,6 @@ dependencyManagement {
 	}
 }
 
-pact {
-    publish {
-        version = '0.0.1'
-        pactDirectory = 'target/pacts'
-        pactBrokerUrl = "$System.env.PACT_URL"
-    }
+task unitTest( type: Test ) {
+	exclude '**/client/**'
 }
