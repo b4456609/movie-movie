@@ -22,11 +22,6 @@ public class MovieController {
         this.movieRepository = movieRepository;
     }
 
-    @GetMapping("/timetable")
-    public List<Movie> getMovieTimetable() {
-        return movieRepository.findAll();
-    }
-
     @GetMapping("/{id}")
     public Movie getMovieById(@PathVariable("id") String id) {
         log.info("movie id: {}", id);
