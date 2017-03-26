@@ -27,7 +27,7 @@ public class MovieController {
     }
 
     @GetMapping("/find")
-    public List<Movie> searchMovieByName(@RequestParam("q") String name) {
+    public List<Movie> searchMovieByName(@RequestParam(value = "q", required = false) String name) {
         log.info("query movie name: {}", name);
         if(name == null){
             return movieRepository.findAll();
