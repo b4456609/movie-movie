@@ -31,6 +31,9 @@ public class MovieController {
     @GetMapping("/")
     public List<Movie> searchMovieByName(@QueryParam("q") String name) {
         log.info("query movie name: {}", name);
+        if(name == null){
+            return movieRepository.findAll();
+        }
         return movieRepository.findAllByTitleContainingIgnoreCase(name);
     }
 
