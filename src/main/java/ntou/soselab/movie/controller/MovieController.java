@@ -22,13 +22,13 @@ public class MovieController {
         this.movieRepository = movieRepository;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public Movie getMovieById(@PathVariable("id") String id) {
         log.info("movie id: {}", id);
         return movieRepository.findOne(id);
     }
 
-    @GetMapping("/")
+    @GetMapping("/find")
     public List<Movie> searchMovieByName(@QueryParam("q") String name) {
         log.info("query movie name: {}", name);
         if(name == null){
