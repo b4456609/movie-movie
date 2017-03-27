@@ -23,7 +23,9 @@ public class MovieController {
     @GetMapping("/id/{id}")
     public Movie getMovieById(@PathVariable("id") String id) {
         log.info("movie id: {}", id);
-        return movieRepository.findOne(id);
+        Movie one = movieRepository.findOne(id);
+        if (one == null) throw new NotFoundException();
+        return one;
     }
 
     @GetMapping("/find")
