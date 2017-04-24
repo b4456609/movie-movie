@@ -1,6 +1,10 @@
 spring:
   application:
     name: movie
+  data:
+    mongodb:
+      database: movie
+      host: ${DB_HOST:localhost}
 
 server:
   port: 8081
